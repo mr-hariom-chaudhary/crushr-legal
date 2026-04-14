@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Verified — Crushr</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: white;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .card {
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+    .logo {
+      font-size: 32px;
+      font-weight: 700;
+      color: #E84393;
+      margin-bottom: 4px;
+    }
+    .tagline {
+      font-size: 11px;
+      color: #CCCCCC;
+      letter-spacing: 3px;
+      margin-bottom: 40px;
+    }
+    .icon {
+      width: 80px;
+      height: 80px;
+      background: #FFF0F7;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+    }
+    .icon svg {
+      width: 40px;
+      height: 40px;
+    }
+    h1 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 12px;
+    }
+    p {
+      font-size: 15px;
+      color: #9E9E9E;
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+    .btn {
+      display: block;
+      background: #E84393;
+      color: white;
+      text-decoration: none;
+      padding: 16px 24px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .btn-outline {
+      display: block;
+      background: white;
+      color: #E84393;
+      text-decoration: none;
+      padding: 16px 24px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      border: 2px solid #E84393;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">Crushr</div>
+    <div class="tagline">FIND YOUR CRUSH</div>
+
+    <div class="icon">
+      <svg viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="12" r="12" fill="#E84393"/>
+        <path d="M7 12.5L10.5 16L17 9" stroke="white" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <h1>Email Confirmed! 🎉</h1>
+    <p>Your email has been successfully verified. Open the Crushr app and log in to find your crush!</p>
+
+    <a href="com.datingapp.crushr://login-callback" class="btn">
+      Open Crushr App
+    </a>
+    <a href="https://crushr.in" class="btn-outline">
+      Open Web App
+    </a>
+  </div>
+</body>
+</html>
