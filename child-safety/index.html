@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Child Safety Standards — Crushr</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --pink: #E84393;
+      --pink-light: #fff0f7;
+      --dark: #1a1a2e;
+      --text: #333;
+      --muted: #777;
+      --border: #f0d6e8;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--pink);
+      letter-spacing: -0.5px;
+    }
+
+    .logo span {
+      color: var(--dark);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--pink-light) 0%, #fff 60%);
+      padding: 60px 24px 40px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--pink);
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 800;
+      color: var(--dark);
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .hero h1 span { color: var(--pink); }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1rem;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    .section {
+      margin-bottom: 36px;
+      padding: 28px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: #fff;
+      transition: box-shadow 0.2s;
+    }
+
+    .section:hover {
+      box-shadow: 0 4px 24px rgba(232, 67, 147, 0.08);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .section-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--pink-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .section h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--dark);
+    }
+
+    .section p, .section li {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .section ul {
+      padding-left: 20px;
+      margin-top: 8px;
+    }
+
+    .section li {
+      margin-bottom: 6px;
+    }
+
+    .highlight {
+      background: var(--pink-light);
+      border-left: 3px solid var(--pink);
+      padding: 14px 18px;
+      border-radius: 0 10px 10px 0;
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: var(--dark);
+      font-weight: 600;
+    }
+
+    .contact-box {
+      background: var(--dark);
+      color: #fff;
+      border-radius: 16px;
+      padding: 28px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .contact-box h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .contact-box p {
+      font-size: 0.9rem;
+      color: #ccc;
+      margin-bottom: 16px;
+    }
+
+    .contact-box a {
+      display: inline-block;
+      background: var(--pink);
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 24px;
+      border-radius: 100px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: opacity 0.2s;
+    }
+
+    .contact-box a:hover { opacity: 0.85; }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    footer a { color: var(--pink); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Crush<span>r</span></div>
+</header>
+
+<div class="hero">
+  <div class="hero-badge">Policy</div>
+  <h1>Child <span>Safety</span> Standards</h1>
+  <p>Crushr is committed to maintaining a safe platform and protecting minors from exploitation and abuse.</p>
+</div>
+
+<div class="container">
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">🔞</div>
+      <h2>Age Requirement</h2>
+    </div>
+    <p>Crushr is a dating application strictly intended for users who are <strong>18 years of age or older</strong>. Users are required to confirm their age during registration. Any account found to belong to a minor will be immediately terminated.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">🚫</div>
+      <h2>Zero Tolerance Policy</h2>
+    </div>
+    <p>Crushr has a strict zero-tolerance policy against:</p>
+    <ul>
+      <li>Child Sexual Abuse Material (CSAM) of any kind</li>
+      <li>Content that sexualizes, exploits, or endangers minors</li>
+      <li>Grooming or solicitation of minors</li>
+      <li>Any communication designed to exploit children</li>
+    </ul>
+    <div class="highlight">Any user found violating these standards will be permanently banned and reported to the relevant authorities immediately.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">🛡️</div>
+      <h2>Prevention Measures</h2>
+    </div>
+    <p>We take the following measures to prevent harm to minors:</p>
+    <ul>
+      <li>Age verification during account registration</li>
+      <li>In-app reporting tools for all users to flag inappropriate content</li>
+      <li>Manual review of reported accounts and content</li>
+      <li>Immediate suspension of accounts under investigation</li>
+      <li>Cooperation with law enforcement when required</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">📢</div>
+      <h2>Reporting Violations</h2>
+    </div>
+    <p>If you encounter any content or behavior that violates our child safety standards, please report it immediately through:</p>
+    <ul>
+      <li>The <strong>in-app report button</strong> on any user profile</li>
+      <li>Emailing us directly at <strong>hariomchaudharybusiness@gmail.com</strong></li>
+    </ul>
+    <p style="margin-top:10px;">All reports are reviewed promptly and taken seriously.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">⚖️</div>
+      <h2>Legal Compliance</h2>
+    </div>
+    <p>Crushr complies with all applicable laws regarding the protection of minors, including but not limited to the Information Technology Act, 2000 (India) and relevant CSAM prevention regulations. We cooperate fully with law enforcement agencies in investigations related to child safety.</p>
+  </div>
+
+  <div class="contact-box">
+    <h3>Child Safety Contact</h3>
+    <p>For child safety concerns, CSAM reports, or compliance inquiries, contact our designated safety officer directly.</p>
+    <a href="mailto:hariomchaudharybusiness@gmail.com">hariomchaudharybusiness@gmail.com</a>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Crushr. All rights reserved. &nbsp;|&nbsp; <a href="/">Home</a> &nbsp;|&nbsp; Last updated: April 2026</p>
+</footer>
+
+</body>
+</html>
