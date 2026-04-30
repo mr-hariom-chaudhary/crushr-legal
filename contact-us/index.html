@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — Crushr</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --pink: #FF3C6F;
+      --dark: #0F0F0F;
+      --text: #1a1a1a;
+      --muted: #555;
+      --border: #e5e5e5;
+      --bg: #fafafa;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 18px 0;
+    }
+
+    .header-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo {
+      font-family: 'Georgia', serif;
+      font-size: 22px;
+      font-weight: bold;
+      color: var(--pink);
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+
+    .logo span { color: var(--dark); }
+
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    .page-label {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--pink);
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: bold;
+      color: var(--dark);
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .meta {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 40px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    @media (max-width: 600px) {
+      .two-col { grid-template-columns: 1fr; }
+      h1 { font-size: 24px; }
+      main { padding: 32px 16px 60px; }
+    }
+
+    /* Info cards */
+    .info-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px 22px;
+      margin-bottom: 16px;
+    }
+
+    .info-card .ic-label {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .info-card .ic-value {
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      color: var(--dark);
+      font-weight: bold;
+    }
+
+    .info-card .ic-value a {
+      color: var(--pink);
+      text-decoration: none;
+    }
+
+    .info-card .ic-value a:hover { text-decoration: underline; }
+
+    .info-card .ic-note {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* Form */
+    .form-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px 28px;
+    }
+
+    .form-card h2 {
+      font-size: 18px;
+      font-weight: bold;
+      color: var(--dark);
+      margin-bottom: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .field {
+      margin-bottom: 16px;
+    }
+
+    label {
+      display: block;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: var(--dark);
+      background: #fafafa;
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      padding: 10px 12px;
+      outline: none;
+      transition: border-color 0.2s;
+      appearance: none;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--pink);
+      background: #fff;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 110px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      background: var(--pink);
+      color: #fff;
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      padding: 12px;
+      cursor: pointer;
+      margin-top: 4px;
+      transition: opacity 0.2s;
+    }
+
+    .submit-btn:hover { opacity: 0.88; }
+
+    .success-msg {
+      display: none;
+      background: #f0faf4;
+      border: 1px solid #b6e4c8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: #1a7a45;
+      margin-top: 16px;
+    }
+
+    footer {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      color: #aaa;
+      padding: 32px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    footer a {
+      color: #888;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    footer a:hover { color: var(--pink); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="https://crushr.in" class="logo">crushr<span>.</span></a>
+  </div>
+</header>
+
+<main>
+  <div class="page-label">Support</div>
+  <h1>Contact Us</h1>
+  <div class="meta">We typically respond within 2 business days. For payment issues, please include your registered email and transaction details.</div>
+
+  <div class="two-col">
+
+    <!-- Left: contact info -->
+    <div>
+      <div class="info-card">
+        <div class="ic-label">Email</div>
+        <div class="ic-value"><a href="mailto:mr.hariomchaudhary@gmail.com">mr.hariomchaudhary@gmail.com</a></div>
+        <div class="ic-note">Response within 2 business days</div>
+      </div>
+
+      <div class="info-card">
+        <div class="ic-label">Website</div>
+        <div class="ic-value"><a href="https://crushr.in">https://crushr.in</a></div>
+      </div>
+
+      <div class="info-card">
+        <div class="ic-label">App</div>
+        <div class="ic-value">Crushr — Dating App</div>
+        <div class="ic-note">Available on Google Play Store</div>
+      </div>
+
+      <div class="info-card">
+        <div class="ic-label">Business Address</div>
+        <div class="ic-value">Panvel, Maharashtra, India</div>
+      </div>
+
+      <div class="info-card">
+        <div class="ic-label">Refund Queries</div>
+        <div class="ic-value"><a href="https://legal.crushr.in/refund-policy">Refund Policy →</a></div>
+        <div class="ic-note">Read our policy before raising a request</div>
+      </div>
+    </div>
+
+    <!-- Right: contact form -->
+    <div>
+      <div class="form-card">
+        <h2>Send us a message</h2>
+
+        <form id="contactForm" onsubmit="handleSubmit(event)">
+          <div class="field">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Your name" required />
+          </div>
+
+          <div class="field">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="you@example.com" required />
+          </div>
+
+          <div class="field">
+            <label for="subject">Subject</label>
+            <select id="subject" required>
+              <option value="" disabled selected>Select a topic</option>
+              <option>Payment / Refund Issue</option>
+              <option>Account Problem</option>
+              <option>Subscription Query</option>
+              <option>Report a Bug</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Describe your issue in detail..." required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+
+        <div class="success-msg" id="successMsg">
+          ✓ Your message has been received. We'll get back to you within 2 business days at the email you provided.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div>© 2026 Crushr. All rights reserved.</div>
+  <div style="margin-top:8px">
+    <a href="https://legal.crushr.in/privacy-policy">Privacy Policy</a>
+    <a href="https://legal.crushr.in/terms-of-service">Terms of Service</a>
+    <a href="https://legal.crushr.in/refund-policy">Refund Policy</a>
+    <a href="https://crushr.in/contact">Contact</a>
+  </div>
+</footer>
+
+<script>
+  function handleSubmit(e) {
+    e.preventDefault();
+    document.getElementById('contactForm').style.display = 'none';
+    document.getElementById('successMsg').style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
